@@ -1,5 +1,13 @@
+import { Helmet } from 'react-helmet';
+import Gallery from './gallery/gallery';
+
 const MyHappiness = () => {
-    return <h1>照片墙</h1>;
+    return <>
+    <Helmet>
+      <link rel="stylesheet" href="./css/gallery.css"></link>
+    </Helmet>
+    <Gallery />
+    </>;
   };
   
 export default MyHappiness;
