@@ -35,8 +35,8 @@ class Gallery extends Component{
       this.constantPos = {
         //中间展示 figure
         centerPos:{
-          left: 1,
-          top: 1
+          left: 0,
+          top: 0
         },
         //水平方向取值范围
         horizontalRange:{
@@ -66,6 +66,7 @@ class Gallery extends Component{
           */
         ]
       }
+      this.stageRef = React.createRef();
     }
     /**
      * 图片居中
@@ -158,16 +159,21 @@ class Gallery extends Component{
     componentDidMount(){
       // 获取 stage 的宽高
       let stage = document.getElementById('stage'),
-          stageWidth = stage.scrollWidth,
-          stageHeight = stage.scrollHeight,
+          stageWidth = window.innerWidth,
+          stageHeight = window.innerHeight,
+          // stageWidth = stage.scrollWidth,
+          // stageHeight = stage.scrollHeight,
           halfStageWidth = Math.ceil(stageWidth/2),
           halfStageHeight = Math.ceil(stageHeight/2)
+          
       // 获取 figure 的宽高
       let figure = document.getElementById('figure0'),
           figureWidth = figure.scrollWidth,
           figureHeight = figure.scrollHeight,
-          halfFigureWidth = Math.ceil(figureWidth/2),
-          halfFigureHeight = Math.ceil(figureHeight/2)
+          halfFigureWidth = 140,
+          halfFigureHeight = 150
+          // halfFigureWidth = Math.ceil(figureWidth/2),
+          // halfFigureHeight = Math.ceil(figureHeight/2)
       this.constantPos = {
         // 中心 figure 位置
         centerPos:{
@@ -211,7 +217,7 @@ class Gallery extends Component{
                       center={this.putFigureCenter(index)}/>)
   }.bind(this))
     return(
-      <div className="stage" id="stage">
+      <div className="stage" id="stage" ref={this.stageRef}>
         <div className="img-container">
           {imgFigures}
         </div>

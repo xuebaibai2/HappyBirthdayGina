@@ -16,12 +16,11 @@ class Image extends Component{
     if(this.props.arrange.pos){
       styleObj = {...this.props.arrange.pos}
     }
-    console.log('styleObj', styleObj);
     if(this.props.arrange.rotate){
       styleObj["transform"] = `rotate(${this.props.arrange.rotate}deg)`
     }
     if(this.props.arrange.isCenter){
-      styleObj['z-index'] = 11
+      styleObj['zIndex'] = 11
     }
     let figureClassName = "img-figure"
     figureClassName += this.props.arrange.isReverse ? ' is-reverse' : ''
