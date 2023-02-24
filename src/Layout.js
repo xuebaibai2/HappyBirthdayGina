@@ -17,9 +17,12 @@ const Layout = () => {
               <Nav.Link>谢谢你</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/myhappiness">
-              <Nav.Link>幸福角落</Nav.Link>
+              <Nav.Link>我的幸福角落</Nav.Link>
             </LinkContainer>
           </Nav>
+          <LinkContainer to="/daoqian">
+            <Nav.Link>道歉信</Nav.Link>
+          </LinkContainer>
         </Container>
       </Navbar>
       <Outlet />
