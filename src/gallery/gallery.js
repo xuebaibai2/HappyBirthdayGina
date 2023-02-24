@@ -3,7 +3,7 @@ import ReactDom from 'react-dom'
 import ImgsData from './imgsdata.json'
 import Image from './image'
 import Controller from './controller'
-import './gallery.less'
+// import './gallery.less'
 
 // 获取图片数组相关信息，增加 URL
 let ImgInfos = ImgsData.map((img)=>{

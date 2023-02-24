@@ -6,6 +6,7 @@ import Home from './Home';
 import Layout from './Layout';
 import MyHappiness from './MyHappiness';
 import NoPage from './Nopage';
+import LoveLetter from './LoveLetter';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="tolove" element={<LoveWords />} />
+          <Route path="tolove" element={<LoveLetter />} />
           <Route path="myhappiness" element={<MyHappiness />} />
           <Route path="*" element={<NoPage />} />
         </Route>

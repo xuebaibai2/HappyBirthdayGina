@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { timeElapse } from './TimeElapse';
+import { TimeElapse } from './TimeElapse';
 
 const LoveWords = () => {
   const together = new Date('2022-03-15T21:02:00');
@@ -11,7 +11,7 @@ const LoveWords = () => {
   const [fireworks, setFireworks] = useState([]);
   const [particles, setParticles] = useState([]);
   const [merrywrap, setMerrywrap] = useState('merrywrap');
-  const [days, setDays] = useState(timeElapse(together));
+  const [days, setDays] = useState(TimeElapse(together));
   var stepMinutes = [2000, 2000, 1000, 1000];
   let step = 1;
 
@@ -28,7 +28,7 @@ const LoveWords = () => {
   my;
 
   setInterval(() => {
-    setDays(timeElapse(together));
+    setDays(TimeElapse(together));
   }, 1000);
 
   useEffect(() => {

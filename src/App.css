@@ -54,3 +54,13 @@ body,
     transform: rotate(360deg);
   }
 }
+
+#clock-box {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#clock-box .digit {
+  font-size: 2.5rem;
+}
