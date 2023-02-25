@@ -9,6 +9,7 @@ import LoveLetter from './LoveLetter';
 import Daoqian from './Daoqian';
 import TEST from './Test';
 import Todos from './Todos';
+import Count from './Count';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="daoqian" element={<Daoqian />} />
           <Route path="todo" element={<Todos />} />
           <Route path="test" element={<TEST />} />
+          <Route path="count" element={<Count />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

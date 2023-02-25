@@ -7,7 +7,6 @@ import ReactAudioPlayer from 'react-audio-player';
 import xxlg from './static/xxlg.mp3';
 import { useState } from 'react';
 import IntroPage from './IntroPage';
-import TEST from './Test';
 
 const Layout = () => {
   const [play, setPlay] = useState(false);

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import LoverLetterContent from './LoveLetterContent';
 import ShootingStar from './ShootingStart';
 import { TimeElapse } from './TimeElapse';
+import countapi from 'countapi-js';
 
 const LoveLetter = () => {
   const together = new Date('2022-03-15T21:02:00');
@@ -22,6 +23,9 @@ const LoveLetter = () => {
   }, [openEnvelope]);
 
   useEffect(() => {
+    countapi.hit('happy-birthday-gina.vercel.app', 'letter').then(res => {
+      console.log('hit letter: ', res);
+    });
     return () => {
       clearInterval(timer);
     }

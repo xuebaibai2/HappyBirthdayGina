@@ -2,8 +2,15 @@ import BirthdayWords from './Birthday-words';
 import { Helmet } from 'react-helmet';
 
 import LoveBubble from './LoveBubble';
+import { useEffect } from 'react';
+import countapi from 'countapi-js';
 
 const Home = () => {
+  useEffect(() => {
+    countapi.hit('happy-birthday-gina.vercel.app', 'home').then(res => {
+      console.log('hit home: ', res);
+    });
+  }, []);
   return (
     <>
     <Helmet>

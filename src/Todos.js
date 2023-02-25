@@ -11,6 +11,8 @@ import {
   MDBRow,
 } from 'mdb-react-ui-kit';
 import { useEffect, useState } from 'react';
+import countapi from 'countapi-js';
+
 const Todos = () => {
   const [todos, setTodos] = useState([]);
   const [load, setLoad] = useState(false);
@@ -24,6 +26,7 @@ const Todos = () => {
         '去凯恩斯海底酒店',
         '去冰岛舔冰',
         '去蓝山泡温泉',
+        '一起看好看的剧，看悬疑恐怖片',
         '去黄金海岸华纳影城',
         '去大阪华纳影城',
         '草莓多多地准备',
@@ -66,7 +69,11 @@ const Todos = () => {
       setTodos(_todos);
     });
     setLoad(true);
-  });
+
+    countapi.hit('happy-birthday-gina.vercel.app', 'todos').then(res => {
+      console.log('hit photo: ', res);
+    });
+  }, []);
 
   return (
     <>

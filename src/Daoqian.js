@@ -1,6 +1,14 @@
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import countapi from 'countapi-js';
 
 const Daoqian = () => {
+  useEffect(() => {
+    
+    countapi.hit('happy-birthday-gina.vercel.app', 'apology').then(res => {
+      console.log('hit photo: ', res);
+    });
+  }, []);
   return (
     <>
       <Helmet>
