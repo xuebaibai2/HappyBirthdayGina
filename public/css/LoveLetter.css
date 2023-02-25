@@ -58,7 +58,7 @@ background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
     transform-origin: left;
 }
 .card::after {
-    content: '一封书信';
+    content: '一封信';
     right: 0;
     top: 0;
     display: flex;
@@ -118,7 +118,7 @@ background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
   /* cv工程师 嘿嘿嘿 */
   .heart {
     position: absolute;
-    right: 0;
+    left: 5rem;
     bottom: 0;
     width: 50px;
     height: 50px;
@@ -188,6 +188,12 @@ background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
     font-size: 25px;
 }
 
+@media (max-width: 800px) {
+  .box {
+    font-size: 12px;
+  }
+}
+
 .box-appear {
   opacity: 1;
   transition: opacity 7s;
@@ -195,8 +201,8 @@ background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
   height: 100%;
 }
 
-.click-right {
+.click-left {
   position: absolute;
-    right: 8rem;
+    left: 8rem;
     font-size: 2rem;
 }

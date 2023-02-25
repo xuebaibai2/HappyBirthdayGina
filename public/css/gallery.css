@@ -120,3 +120,11 @@ h3 {
     background-color: #555;
     transform: rotateY(180deg);
 }
+
+.description {
+        position: absolute;
+        z-index: 100;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}

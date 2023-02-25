@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import LoverLetterContent from './LoveLetterContent';
+import ShootingStar from './ShootingStart';
 import { TimeElapse } from './TimeElapse';
 
 const LoveLetter = () => {
@@ -11,28 +12,26 @@ const LoveLetter = () => {
   const [type, setType] = useState(false);
   const [openEnvelope, setOpenEnvelope] = useState(false);
   const [days, setDays] = useState(TimeElapse(together));
-
+  let timer;
   useEffect(() => {
     if (!type) {
-        setInterval(() => {
+        timer = setInterval(() => {
             setDays(TimeElapse(together));
           }, 1000);
     }
   }, [openEnvelope]);
 
+  useEffect(() => {
+    return () => {
+      clearInterval(timer);
+    }
+  }, []);
+
   const handleHeartClick = () => {
     cardRef.current.style = { opacity: 0 };
-    showBackground();
+    // showBackground();
     setType(true);
   };
-
-  const showBackground = () => {
-    setTimeout(() => {
-      cardRef.current.style.opacity = 1;
-    }, 3000);
-  };
-
-  const handleCardEnter = () => {};
 
   return (
     <>
@@ -59,7 +58,7 @@ const LoveLetter = () => {
             >
               献给最爱的你
               <p></p>
-              <span className='click-right'>👉</span>
+              <span className='click-left'>👈</span>
             </div>
             <div
               className="heart content"
@@ -70,7 +69,8 @@ const LoveLetter = () => {
         )}
         {!type && days}
         <div className={`box ${type ? 'box-appear' : ''}`} ref={boxRef}>
-          {type && <LoverLetterContent />}
+          {type && <LoverLetterContent scrollRef={boxRef}/>}
+          <ShootingStar></ShootingStar>
         </div>
       </div>
     </>

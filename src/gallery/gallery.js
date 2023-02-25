@@ -218,6 +218,9 @@ class Gallery extends Component{
   }.bind(this))
     return(
       <div className="stage" id="stage" ref={this.stageRef}>
+        <div className='description'>
+        翻转相册
+        </div>
         <div className="img-container">
           {imgFigures}
         </div>

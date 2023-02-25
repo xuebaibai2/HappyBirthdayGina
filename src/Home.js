@@ -1,8 +1,15 @@
 import BirthdayWords from './Birthday-words';
-import './Home.css';
+import { Helmet } from 'react-helmet';
+
+import LoveBubble from './LoveBubble';
 
 const Home = () => {
   return (
+    <>
+    <Helmet>
+      <link rel="stylesheet" href="./css/Home.css"></link>
+    </Helmet>
+    
     <div id="home-page">
       <div className="velas velas1">
         <div className="fuego fuego1"></div>
@@ -61,7 +68,7 @@ const Home = () => {
         width="200px"
         height="400px"
         viewBox="0 0 200 500"
-        enable-background="new 0 0 200 500"
+        enableBackground="new 0 0 200 500"
       >
         <path
           fill="#a88679"
@@ -295,7 +302,9 @@ const Home = () => {
       <div className='type-text'>
         <BirthdayWords />
       </div>
+      <LoveBubble></LoveBubble>
     </div>
+    </>
   );
 };
 

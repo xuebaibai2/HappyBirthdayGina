@@ -1,0 +1,92 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+  border-radius: 100%;
+  box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  overflow: hidden;
+}
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #ff0036;
+  transform: rotate(45deg) translate(10px, 10px);
+  animation: ani 1.5s linear infinite;
+}
+.heart:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #ff0036;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  border-radius: 50%;
+}
+.heart:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #ff0036;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  border-radius: 50%;
+}
+.center:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes ani {
+  0% {
+    transform: rotate(45deg) translate(10px, 10px) scale(1);
+  }
+  30% {
+    transform: rotate(45deg) translate(10px, 10px) scale(1.4);
+  }
+  40% {
+    transform: rotate(45deg) translate(10px, 10px) scale(1.2);
+  }
+  80% {
+    transform: rotate(45deg) translate(10px, 10px) scale(1.3);
+  }
+  100% {
+    transform: rotate(45deg) translate(10px, 10px) scale(1);
+  }
+}
+
+@keyframes text-ani {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.4);
+    }
+    40% {
+      transform: scale(1.2);
+    }
+    80% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.heart-text {
+  font-size: 2rem;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
