@@ -7,9 +7,9 @@ import countapi from 'countapi-js';
 
 const Home = () => {
   useEffect(() => {
-    countapi.hit('happy-birthday-gina.vercel.app', 'homeV4').then(res => {
-      console.log('hit home: ', res);
-    });
+    // countapi.hit('happy-birthday-gina.vercel.app', 'homeV4').then(res => {
+    //   console.log('hit home: ', res);
+    // });
   }, []);
   return (
     <>
@@ -304,7 +304,7 @@ const Home = () => {
             お誕生日おめでとう
           </h1>
         </div>
-        <h3>❤️李振华❤️</h3>
+        <h3>❤️ 亲爱的 ❤️ 李振华 ❤️</h3>
       </div>
       <div className='type-text'>
         <BirthdayWords />
