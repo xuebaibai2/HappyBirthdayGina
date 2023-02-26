@@ -21,18 +21,15 @@ const Layout = () => {
           </LinkContainer>
           <Nav className="me-auto">
             <LinkContainer to="/tolove">
-              <Nav.Link>信</Nav.Link>
+              <Nav.Link>谢谢你</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/myhappiness">
-              <Nav.Link>幸福角落</Nav.Link>
+              <Nav.Link>我的幸福角落</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/todo">
               <Nav.Link>Todos</Nav.Link>
             </LinkContainer>
           </Nav>
-          <LinkContainer to="/daoqian">
-            <Nav.Link>对不起</Nav.Link>
-          </LinkContainer>
         </Container>
       </Navbar>
       <Outlet /></>}
