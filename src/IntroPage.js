@@ -5,7 +5,7 @@ import countapi from 'countapi-js';
 
 const IntroPage = ({ handleButtonClick }) => {
   useEffect(() => {
-    countapi.hit('happy-birthday-gina.vercel.app', 'IntroPage').then(res => {
+    countapi.hit('happy-birthday-gina.vercel.app', 'IntroPageV4').then(res => {
       console.log('hit intro page', res);
     });
   }, []);

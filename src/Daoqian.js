@@ -5,7 +5,7 @@ import countapi from 'countapi-js';
 const Daoqian = () => {
   useEffect(() => {
     
-    countapi.hit('happy-birthday-gina.vercel.app', 'apology').then(res => {
+    countapi.hit('happy-birthday-gina.vercel.app', 'apologyV4').then(res => {
       console.log('hit photo: ', res);
     });
   }, []);

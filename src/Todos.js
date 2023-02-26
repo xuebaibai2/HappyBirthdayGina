@@ -70,7 +70,7 @@ const Todos = () => {
     });
     setLoad(true);
 
-    countapi.hit('happy-birthday-gina.vercel.app', 'todos').then(res => {
+    countapi.hit('happy-birthday-gina.vercel.app', 'todosV4').then(res => {
       console.log('hit photo: ', res);
     });
   }, []);

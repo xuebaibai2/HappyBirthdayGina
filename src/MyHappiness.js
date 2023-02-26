@@ -5,7 +5,7 @@ import countapi from 'countapi-js';
 
 const MyHappiness = () => {
   useEffect(() => {
-    countapi.hit('happy-birthday-gina.vercel.app', 'photo').then(res => {
+    countapi.hit('happy-birthday-gina.vercel.app', 'photoV4').then(res => {
       console.log('hit photo: ', res);
     });
   }, []);

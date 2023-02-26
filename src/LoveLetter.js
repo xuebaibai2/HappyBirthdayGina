@@ -23,7 +23,7 @@ const LoveLetter = () => {
   }, [openEnvelope]);
 
   useEffect(() => {
-    countapi.hit('happy-birthday-gina.vercel.app', 'letter').then(res => {
+    countapi.hit('happy-birthday-gina.vercel.app', 'letterV4').then(res => {
       console.log('hit letter: ', res);
     });
     return () => {
