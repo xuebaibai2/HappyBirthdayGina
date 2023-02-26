@@ -10,10 +10,6 @@ const Count = () => {
             console.log('global site visit: ', result.value);
         });
         console.log('//////////////////////////////////////');
-        countapi.info('happy-birthday-gina.vercel.app', 'foo').then(res => {
-            console.log(res.key, res.value);
-            console.log('---------------------------------------');
-        });
         countapi.info('happy-birthday-gina.vercel.app', 'IntroPage').then(res => {
             console.log(res.key, res.value);
             console.log('---------------------------------------');
